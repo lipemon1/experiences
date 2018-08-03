@@ -23,17 +23,13 @@ namespace IntegerToString
                 buff[index -= 1] = alphabet[i];
             }
 
+            //checking for negatives
             if (number < 0)
             {
                 buff[index -= 1] = '-';
             }
 
             return new String(buff, index, buff.Length - index);
-        }
-
-        public static void TestMethod()
-        {
-            Debug.Log(Itoa(-0x12345678, 16));
         }
     }
 }
